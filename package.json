@@ -1,0 +1,24 @@
+{
+  "name": "mmit-soft-ltd",
+  "version": "1.0.0",
+  "description": "Official website of MMIT SOFT LTD",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/input.css -o ./public/tailwind.css -w"
+  },
+  "keywords": [
+    "tailwindcss",
+    "postcss",
+    "css"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0"
+  },
+  "devDependencies": {
+    "postcss-cli": "^9.0.0"
+  }
+}

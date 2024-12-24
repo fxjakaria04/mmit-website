@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { 
+    display: none !important; 
+}
+body {
+    font-family: Roboto;
+}
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Right to Left scrolling animation */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Apply animation to scrolling text */
+.scroll-ltr {
+    animation: scroll-left 15s linear infinite;
+}
+
+.scroll-rtl {
+    animation: scroll-right 15s linear infinite;
+}
+@media (min-width: 780px){
+    .scroll-ltr {
+        animation: scroll-left 25s linear infinite;
+    }
+    .scroll-rtl {
+        animation: scroll-right 25s linear infinite;
+    }
+}
+
+.btn-dark {
+    @apply bg-gray-800 hover:bg-gray-100 text-gray-100 hover:text-gray-800 border-gray-800 border transition-all duration-200;
+}
+.btn-light {
+    @apply bg-gray-100 hover:bg-gray-800 text-gray-800 hover:text-gray-100 border-gray-800 border transition-all duration-200;
+}
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 100%;
+    transition: transform 0.3s ease;
+}

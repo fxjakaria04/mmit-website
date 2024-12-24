@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMIT SOFT LTD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="public/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    
+<!-- Navbar -->
+  <nav class="bg-gray-200 border-gray-200">
+    <div x-data="{resNavbar: false}" @click.outside="resNavbar = false" class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:p-4 md:py-3.5">
+      <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse p-2 md:p-0">
+          <img src="public/Image/logo.png" class="h-8" alt="MMIT Logo" />
+      </a>
+      <button @click="resNavbar = !resNavbar" type="button" class="inline-flex items-center p-2 md:p-0 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-dropdown" aria-expanded="false">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div :class="resNavbar ? 'block' : 'hidden'" x-transition.scale.origin.top class="w-full md:block md:w-auto absolute top-[30px] md:static">
+        <ul class="flex items-center flex-col font-medium gap-0 lg:gap-7 md:gap-3 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#dfdfdf] md:space-x-0 lg:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+          <li x-data="{dpDigital: false}" @click.outside="dpDigital = false" class="relative cursor-pointer py-3">
+            <a @mouseover="dpDigital = !dpDigital" @mouseout="dpDigital = false">Digital Marketing <i :class="{'fa-solid fa-angle-down': true, 'rotate-180': dpDigital}" class="transition-transform duration-500"></i> </a>
+            <ul x-show="dpDigital" x-cloak @mouseover="dpDigital = true" x-transition class="absolute min-w-full top-8 z-10 bg-white rounded-md whitespace-nowrap shadow-md overflow-hidden">
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Software 1</a>
+                </li>
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Software 2</a>
+                </li>
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Software 3</a>
+                </li>
+            </ul>
+          </li>
+          <li x-data="{dpDigital: false}" @click.outside="dpDigital = false" class="relative cursor-pointer py-3">
+            <a @mouseover="dpDigital = !dpDigital" @mouseout="dpDigital = false">Software <i :class="{'fa-solid fa-angle-down': true, 'rotate-180': dpDigital}" class="transition-transform duration-500"></i> </a>
+            <ul x-show="dpDigital" x-cloak @mouseover="dpDigital = true" x-transition class="absolute min-w-full top-8 z-10 bg-white rounded-md whitespace-nowrap shadow-md overflow-hidden">
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Software 1</a>
+                </li>
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Software 2</a>
+                </li>
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Software 3</a>
+                </li>
+            </ul>
+          </li>
+          <li x-data="{dpDigital: false}" @click.outside="dpDigital = false" class="relative cursor-pointer py-3">
+            <a @mouseover="dpDigital = !dpDigital" @mouseout="dpDigital = false">UX & Interactive <i :class="{'fa-solid fa-angle-down': true, 'rotate-180': dpDigital}" class="transition-transform duration-500"></i> </a>
+            <ul x-show="dpDigital" x-cloak @mouseover="dpDigital = true" x-transition class="absolute min-w-full top-8 z-10 bg-white rounded-md whitespace-nowrap shadow-md overflow-hidden">
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">User Interface</a>
+                </li>
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">User Interface</a>
+                </li>
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">User Interface</a>
+                </li>
+            </ul>
+          </li>
+          <li x-data="{dpDigital: false}" @click.outside="dpDigital = false" class="relative cursor-pointer py-3">
+            <a @mouseover="dpDigital = !dpDigital" @mouseout="dpDigital = false">Who We Are <i :class="{'fa-solid fa-angle-down': true, 'rotate-180': dpDigital}" class="transition-transform duration-500"></i> </a>
+            <ul x-show="dpDigital" x-cloak @mouseover="dpDigital = true" x-transition class="absolute min-w-full top-8 z-10 bg-white rounded-md whitespace-nowrap shadow-md overflow-hidden">
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Who We Are</a>
+                </li>
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Who We Are</a>
+                </li>
+                <li class="hover:bg-gray-100 p-3">
+                    <a href="#">Who We Are</a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Partner</a>
+          </li>
+          <li>
+            <button class="text-white font-medium text-lg leading-5 bg-primary rounded-xl py-2.5 px-2.5">Get a Proposal</button>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+   <main class="w-full py-10" style="background: url(https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <div class="w-11/12 md:w-10/12 m-auto">
+        <div class="bg-[#e0e0e0a1] shadow-lg rounded-md backdrop:blur-3xl md:w-[500px] flex flex-col gap-[2rem] md:gap-16 items-start pt-28 pb-32 px-10">
+            <h1 class="text-3xl font-medium">Accelerate Your Roadmap With Our <span class="text-[#EA2429]">MMIT SOFT</span> Tech Talent Team</h1>
+            <p>Access 40+ software engineers and 50+ Digital Marketers with experience in 100+ technologies.</p>
+            <button class="font-medium text-white md:text-lg text-xs bg-primary hover:bg-green-600 rounded-xl px-6 md:px-12 py-2 md:py-3">Schedule a call</button>
+        </div>
+    </div>
+   </main>
+   <!-- Career -->
+   <section class="w-full py-14 pt-8">
+        <div class="text-center pb-8">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-[teko]">Transforming Ideas into Reality—<span class="text-secondary">Join Our Journey</span></h1>
+            <p class="text-[8px] md:text-[9px] lg:text-xs">Focused on personal growth and empowerment.</p>
+        </div>
+        <div class="w-11/12 md:w-10/12 m-auto">
+            <div class="w-full flex items-start sm:items-center justify-between flex-col gap-y-10">
+                <div class="w-full flex justify-between flex-col sm:flex-row items-start md:items-center">
+                    <p class="text-gray-800 font-medium">Available jobs: 15</p>
+                    <div class="border-b py-1 text-gray-500">   
+                        <input type="text" name="" id="" placeholder="Find jobs" class="outline-none">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-6">
+                    <div class="w-full flex justify-between shadow p-2 md:p-6 rounded-md border border-gray-100">
+                        <div class="w-8/12 flex flex-col items-start justify-between">
+                            <h1 class="text-lg sm:text-xl md:text-xl lg:text-2xl font-semibold w-full truncate">Next.js Developer with huge experience</h1>
+                            <div class="bg-gray-600 text-gray-100 px-4 py-1 cursor-not-allowed">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Full Time</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:items-end w-4/12 gap-3">
+                            <a href="jobDetails.html">
+                                <button class="py-1 btn-dark md:w-44">Details</button>
+                            </a>
+                            <button class="py-1 btn-light md:w-44">Apply</button>
+                        </div>
+                    </div>
+                    <div class="w-full flex justify-between shadow p-2 md:p-6 rounded-md border border-gray-100">
+                        <div class="w-8/12 flex flex-col items-start justify-between">
+                            <h1 class="text-lg sm:text-xl md:text-xl lg:text-2xl font-semibold w-full truncate">UI UX Designer</h1>
+                            <div class="bg-gray-600 text-gray-100 px-4 py-1 cursor-not-allowed">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Remote</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:items-end w-4/12 gap-3">
+                            <a href="jobDetails.html">
+                                <button class="py-1 btn-dark md:w-44">Details</button>
+                            </a>
+                            <button class="py-1 btn-light md:w-44">Apply</button>
+                        </div>
+                    </div>
+                    <div class="w-full flex justify-between shadow p-2 md:p-6 rounded-md border border-gray-100">
+                        <div class="w-8/12 flex flex-col items-start justify-between">
+                            <h1 class="text-lg sm:text-xl md:text-xl lg:text-2xl font-semibold w-full truncate">Flutter Developer</h1>
+                            <div class="bg-gray-600 text-gray-100 px-4 py-1 cursor-not-allowed">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Full Time</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:items-end w-4/12 gap-3">
+                            <a href="jobDetails.html">
+                                <button class="py-1 btn-dark md:w-44">Details</button>
+                            </a>
+                            <button class="py-1 btn-light md:w-44">Apply</button>
+                        </div>
+                    </div>
+                    <div class="w-full flex justify-between shadow p-2 md:p-6 rounded-md border border-gray-100">
+                        <div class="w-8/12 flex flex-col items-start justify-between">
+                            <h1 class="text-lg sm:text-xl md:text-xl lg:text-2xl font-semibold w-full truncate">Customer Support Executive</h1>
+                            <div class="bg-gray-600 text-gray-100 px-4 py-1 cursor-not-allowed">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Full Time</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:items-end w-4/12 gap-3">
+                            <a href="jobDetails.html">
+                                <button class="py-1 btn-dark md:w-44">Details</button>
+                            </a>
+                            <button class="py-1 btn-light md:w-44">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-dark w-full md:w-[200px] py-1">Load More</button>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+     <footer class="w-full bg-[#021A04] text-white">
+        <div class="w-11/12 md:w-10/12 m-auto grid  grid-cols-4 md:grid-cols-5 py-4 gap-y-4 gap-x-2">
+            <div class="col-span-2 md:col-span-1 text-xs flex flex-col items-start gap-3">
+                <img src="public/Image/logo.png" alt="MMIT SOFT LTD" class="hover:scale-125 transition-all duration-150">
+                <p>Celebrating 09+ Years of Software Development And Digital Marketing Excellence</p>
+                <p>Ready to speak with a project expert? Give us a ring</p>
+                <button class="text-text-color bg-[#D9D9D9] hover:bg-gray-50 rounded-md px-4 py-2">+88 01860-424344</button>
+            </div>
+            <div class="col-span-2 md:col-span-1 truncate flex flex-col items-start gap-3 pl-2">
+                <h1 class="text-alt underline text-lg hover:scale-110 transition-all duration-150">Services</h1>
+                <a href="" class="text-xs hover:underline">Software Development</a>
+                <a href="" class="text-xs hover:underline">Web Design Services</a>
+                <a href="" class="text-xs hover:underline">SEO Services</a>
+                <a href="" class="text-xs hover:underline">PPC Services</a>
+                <a href="" class="text-xs hover:underline">Social Media Services</a>
+                <a href="" class="text-xs hover:underline">Digital Marketing Services</a>
+                <a href="" class="text-xs hover:underline">Content Marketing Services</a>
+                <a href="" class="text-xs hover:underline">Digital Advertising Services</a>
+            </div>
+            <div class="col-span-4 md:col-span-3 grid grid-cols-4 md:grid-cols-3">
+                <div class="col-span-2 md:col-span-1 truncate flex flex-col items-start gap-3 pl-2">
+                    <h1 class="text-alt underline text-lg hover:scale-110 transition-all duration-150">Company</h1>
+                    <a href="" class="text-xs hover:underline">About Us</a>
+                    <a href="" class="text-xs hover:underline">Careers</a>
+                    <a href="" class="text-xs hover:underline">Contact Us</a>
+                    <a href="" class="text-xs hover:underline">Locations</a>
+                    <a href="" class="text-xs hover:underline">Tools</a>
+                </div>
+                <div class="col-span-2 md:col-span-1 truncate flex flex-col items-start gap-3 pl-2">
+                    <h1 class="text-alt underline text-lg hover:scale-110 transition-all duration-150">Roles</h1>
+                    <a href="" class="text-xs hover:underline">IT Firm</a>
+                    <a href="" class="text-xs hover:underline">Software Company</a>
+                    <a href="" class="text-xs hover:underline">Web Development Agency</a>
+                    <a href="" class="text-xs hover:underline">SEO Agency</a>
+                    <a href="" class="text-xs hover:underline">Digital Marketing Agency</a>
+                </div>
+                <div class="col-span-2 md:col-span-1 truncate flex flex-col items-start gap-3 pl-2">
+                    <h1 class="text-alt underline text-lg hover:scale-110 transition-all duration-150">Knowledge</h1>
+                    <a href="" class="text-xs hover:underline">Software Design</a>
+                    <a href="" class="text-xs hover:underline">Web Design</a>
+                    <a href="" class="text-xs hover:underline">SEO</a>
+                    <a href="" class="text-xs hover:underline">PPC</a>
+                    <a href="" class="text-xs hover:underline">Digital Marketing</a>
+                </div>
+                <div class="col-span-2 md:col-span-3 flex items-center justify-start lg:justify-end">
+                    <img src="public/Image/sslCommerce.png" alt="MMIT SOFT LTD" class="lg:h-14">
+                </div>
+            </div>
+        </div>
+        <img src="public/Image/Line.png" alt="MMIT SOFT LTD" class="w-11/12 md:w-10/12 m-auto mt-4">
+        <div class="w-11/12 md:w-10/12 flex items-center flex-col md:flex-row text-center md:items-end md:justify-between m-auto gap-y-2 gap-x-1 py-3 font-normal">
+            <div class="text-sm flex flex-col md:items-start">
+                <p class="tracking-widest"><span class="text-alt">MMIT Soft</span> 2018-2024</p>
+                <p>Sitemap Privacy & terms of Use</p>
+            </div>
+            <p class="text-sm"><span class="text-alt">©</span> 2024 MMIT SOFT - All rights Reserved.</p>
+            <div class="flex flex-col items-center md:items-start justify-center gap-3">
+                <p class="text-xl font-bold">Follow Us<span class="text-alt">.</span></p>
+                <div class="flex items-center gap-2">
+                    <i class="fa-brands fa-facebook-f bg-[#3A3A3A] p-2 rounded-md w-9 hover:text-alt"></i>
+                    <i class="fa-brands fa-youtube bg-[#3A3A3A] p-2 rounded-md w-9 hover:text-alt"></i>
+                    <i class="fa-brands fa-instagram bg-[#3A3A3A] p-2 rounded-md w-9 hover:text-alt"></i>
+                    <i class="fa-brands fa-linkedin-in bg-[#3A3A3A] p-2 rounded-md w-9 hover:text-alt"></i>
+                    <i class="fa-brands fa-x-twitter bg-[#3A3A3A] p-2 rounded-md w-9 hover:text-alt"></i>
+                </div>
+            </div>
+        </div>
+     </footer>
+          
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>
